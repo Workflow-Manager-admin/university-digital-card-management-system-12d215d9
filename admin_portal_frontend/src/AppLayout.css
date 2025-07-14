@@ -1,0 +1,27 @@
+/* App-wide Dashboard Layout with Sidebar and TopNavbar */
+.app-layout {
+  min-height: 100vh;
+  background: #f8f9fa;
+  display: flex;
+}
+
+/* Layout split: sidebar and content */
+.layout-main-area {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+.layout-content {
+  flex: 1 1 auto;
+  padding: 0;
+  background: #f8f9fa;
+  min-height: 88vh;
+}
+
+/* Ensure sidebar scrolls on overflow on smaller screens */
+@media (max-width: 900px) {
+  .app-layout { flex-direction: column; }
+}

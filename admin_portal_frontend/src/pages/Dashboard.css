@@ -1,0 +1,39 @@
+.dashboard-main {
+  padding: 32px 32px 14px 32px;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  font-size: 2.2rem;
+  margin-bottom: 28px;
+  color: #840132;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.dashboard-section-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  margin-top: 38px;
+  min-height: 320px;
+}
+.dashboard-section-split > div {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px 0 rgba(246,201,14,0.06);
+  padding: 22px 25px 18px 25px;
+  min-width: 220px;
+  max-width: 500px;
+}
+.dashboard-subheader {
+  font-size: 1.22rem;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-main { padding: 12px 8px 10px 8px }
+  .dashboard-section-split { flex-direction: column; gap: 14px;}
+  .dashboard-section-split > div {max-width: unset; min-width: 0; }
+}

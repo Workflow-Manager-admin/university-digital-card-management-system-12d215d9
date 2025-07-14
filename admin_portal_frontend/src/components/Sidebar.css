@@ -1,0 +1,107 @@
+/* Sidebar Styles */
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 242px;
+  height: 100vh;
+  background: var(--bg-secondary, #f8f9fa);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 16px 0 rgba(34,34,34,0.04);
+  transition: width 0.2s cubic-bezier(.4,0,.2,1);
+  z-index: 110;
+  border-right: 1px solid var(--border-color, #e9ecef);
+}
+
+.sidebar.collapsed {
+  width: 72px;
+}
+
+.sidebar-header {
+  padding: 24px 16px 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary, #222);
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-right: 0.5em;
+  padding: 0.3em;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.sidebar-toggle:hover {
+  background: #eee;
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--primary, #840132);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 6px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 12px 24px;
+  color: var(--text-primary, #222);
+  border-radius: 8px;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link.active, .sidebar-link:focus, .sidebar-link:hover {
+  background: var(--accent, #F6C90E);
+  color: #222;
+  outline: none;
+}
+
+.sidebar-footer {
+  margin: 28px 0 18px 0;
+  text-align: center;
+}
+
+.sidebar-link.logout {
+  color: #c22c49;
+  font-weight: 600;
+  border-top: 1px solid #f1e6eb;
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
+/* Responsive sidebar */
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 90vw;
+    max-width: 280px;
+    left: -100vw;
+    box-shadow: 2px 0 24px 0 rgba(34,34,34,0.1);
+    transition: left 0.27s cubic-bezier(.4,0,.2,1), width 0.2s cubic-bezier(.4,0,.2,1);
+  }
+  .sidebar.collapsed {
+    left: 0;
+    width: 68vw;
+    min-width: 72px;
+    box-shadow: 2px 0 34px 0 rgba(34,34,34,0.12);
+  }
+}

@@ -1,0 +1,51 @@
+.public-profile {
+  max-width: 410px;
+  margin: 45px auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 24px 0 rgba(34,34,34,0.11);
+  padding: 32px 26px 16px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.public-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.public-profile-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #F6C90E;
+  color: #840132;
+  display: flex;
+  font-size: 2.43rem;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px #f6c90e13;
+}
+
+.public-profile-details {
+  text-align: left;
+  margin-bottom: 22px;
+  width: 100%;
+  font-size: 1.07rem;
+}
+.public-profile-details p {
+  margin-bottom: 7px;
+}
+.public-profile-footer {
+  margin-top: 12px;
+  width: 100%;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .public-profile { padding: 10px 3vw; }
+  .public-profile-header { gap: 6px; }
+  .public-profile-avatar { width: 44px; height: 44px; font-size: 1.42rem }
+}
